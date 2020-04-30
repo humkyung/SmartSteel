@@ -1,0 +1,193 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{FF54E4BE-9116-4C26-9A8F-4098EF123701}</ProjectGuid>
+    <RootNamespace>occlib</RootNamespace>
+    <Keyword>Win32Proj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <PlatformToolset>v110</PlatformToolset>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>11.0.50727.1</_ProjectFileVersion>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <OutDir>..\Setup\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <OutDir>..\Setup\</OutDir>
+    <IntDir>$(Configuration)\</IntDir>
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>..\..\shared\istools;..\..\shared\istools\inc;$(CSF_OPT_INC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;_AFXEXT;WNT;_USRDLL;OCCLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;Dwmapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName)_debug.dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\shared\istools\lib\vc110;$(CSF_OPT_LIB32D);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+      <ImportLibrary>$(OutDir)$(ProjectName)_debug.lib</ImportLibrary>
+      <ProgramDatabaseFile>$(OutDir)$(ProjectName)_debug.pdb</ProgramDatabaseFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>..\..\shared\istools;..\..\shared\istools\inc;$(CSF_OPT_INC);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;_AFXEXT;WNT;_USRDLL;OCCLIB_EXPORTS;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader />
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+      <ShowIncludes>false</ShowIncludes>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>opengl32.lib;Dwmapi.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <OutputFile>$(OutDir)$(ProjectName).dll</OutputFile>
+      <AdditionalLibraryDirectories>..\..\shared\istools\lib\vc110;$(CSF_OPT_LIB32);%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="AngularDim3d.cpp" />
+    <ClCompile Include="BoxEntity.cpp" />
+    <ClCompile Include="ComplexShapeEntity.cpp" />
+    <ClCompile Include="ConeEntity.cpp" />
+    <ClCompile Include="CtorEntity.cpp" />
+    <ClCompile Include="CylinderEntity.cpp" />
+    <ClCompile Include="Dim2d.cpp" />
+    <ClCompile Include="DomeEntity.cpp" />
+    <ClCompile Include="EvolveSurfEntity.cpp" />
+    <ClCompile Include="ExtruEntity.cpp" />
+    <ClCompile Include="GroupEntity.cpp" />
+    <ClCompile Include="HexagonEntity.cpp" />
+    <ClCompile Include="ImportExport\ImportExport.cpp" />
+    <ClCompile Include="ISession_Text.cpp" />
+    <ClCompile Include="jxglTracker.cpp" />
+    <ClCompile Include="LinearDim3d.cpp" />
+    <ClCompile Include="OCC_3dApp.cpp" />
+    <ClCompile Include="OCC_3dAppEx.cpp" />
+    <ClCompile Include="OCC_3dBaseDoc.cpp" />
+    <ClCompile Include="OCC_3dView.cpp" />
+    <ClCompile Include="OCC_BaseApp.cpp" />
+    <ClCompile Include="OCC_BaseAppEx.cpp" />
+    <ClCompile Include="OCC_BaseDoc.cpp" />
+    <ClCompile Include="OCC_BaseView.cpp" />
+    <ClCompile Include="OCCAttribute.cpp" />
+    <ClCompile Include="OCCEntFactory.cpp" />
+    <ClCompile Include="OCCEntity.cpp" />
+    <ClCompile Include="OctagonEntity.cpp" />
+    <ClCompile Include="PyramidEntity.cpp" />
+    <ClCompile Include="RevolutionSurfEntity.cpp" />
+    <ClCompile Include="RtorEntity.cpp" />
+    <ClCompile Include="ImportExport\SaveCSFDBDlg.cpp" />
+    <ClCompile Include="ImportExport\SaveSTEPDlg.cpp" />
+    <ClCompile Include="Select3D_SensitiveText.cpp" />
+    <ClCompile Include="SmartMakeFace.cpp" />
+    <ClCompile Include="SphereEntity.cpp" />
+    <ClCompile Include="TemplateEntity.cpp" />
+    <ClCompile Include="Winmain.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="AngularDim3d.h" />
+    <ClInclude Include="BoxEntity.h" />
+    <ClInclude Include="ComplexShapeEntity.h" />
+    <ClInclude Include="ConeEntity.h" />
+    <ClInclude Include="CtorEntity.h" />
+    <ClInclude Include="CylinderEntity.h" />
+    <ClInclude Include="Dim2d.h" />
+    <ClInclude Include="DomeEntity.h" />
+    <ClInclude Include="EvolveSurfEntity.h" />
+    <ClInclude Include="ExtruEntity.h" />
+    <ClInclude Include="GroupEntity.h" />
+    <ClInclude Include="HexagonEntity.h" />
+    <ClInclude Include="ImportExport\ImportExport.h" />
+    <ClInclude Include="ISession_Text.h" />
+    <ClInclude Include="jxglTracker.h" />
+    <ClInclude Include="LinearDim3d.h" />
+    <ClInclude Include="OCC_3dApp.h" />
+    <ClInclude Include="OCC_3dAppEx.h" />
+    <ClInclude Include="OCC_3dBaseDoc.h" />
+    <ClInclude Include="OCC_3dView.h" />
+    <ClInclude Include="OCC_BaseApp.h" />
+    <ClInclude Include="OCC_BaseAppEx.h" />
+    <ClInclude Include="OCC_BaseDoc.h" />
+    <ClInclude Include="OCC_BaseView.h" />
+    <ClInclude Include="OCCAttribute.h" />
+    <ClInclude Include="OCCEntFactory.h" />
+    <ClInclude Include="OCCEntity.h" />
+    <ClInclude Include="occlib.h" />
+    <ClInclude Include="OctagonEntity.h" />
+    <ClInclude Include="PyramidEntity.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="resource1.h" />
+    <ClInclude Include="RevolutionSurfEntity.h" />
+    <ClInclude Include="RtorEntity.h" />
+    <ClInclude Include="Select3D_SensitiveText.h" />
+    <ClInclude Include="SmartMakeFace.h" />
+    <ClInclude Include="SphereEntity.h" />
+    <ClInclude Include="StdAfx.h" />
+    <ClInclude Include="TemplateEntity.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="res\3dChildFrameTB.bmp" />
+    <Image Include="res\ImportExport.bmp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="occlib.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

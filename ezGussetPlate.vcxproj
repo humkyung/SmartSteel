@@ -1,0 +1,261 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Template|Win32">
+      <Configuration>Template</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{12EAA8CA-0950-4CEA-87F0-59A2707547ED}</ProjectGuid>
+    <RootNamespace>ezGussetPlate</RootNamespace>
+    <Keyword>MFCProj</Keyword>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseOfMfc>Dynamic</UseOfMfc>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <_ProjectFileVersion>10.0.40219.1</_ProjectFileVersion>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">.\Setup\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">false</LinkIncremental>
+    <OutDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">.\Setup\</OutDir>
+    <IntDir Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(Configuration)\</IntDir>
+    <LinkIncremental Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">false</LinkIncremental>
+    <TargetName Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(ProjectName)</TargetName>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>Disabled</Optimization>
+      <AdditionalIncludeDirectories>.\occlib;..\istools;..\istools\inc;..\istools\inc\gui;..\istools\inc\util;..\istools\sdnflib\sdnflib;..\istools\3rdparty\tbb30\include;C:\OpenCASCADE6.8.0\opencascade-6.8.0\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;_DEBUG;WNT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>true</MinimalRebuild>
+      <BasicRuntimeChecks>EnableFastChecks</BasicRuntimeChecks>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>EditAndContinue</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>_DEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>TKLCAF.lib;occlib_vc90_debug.lib;sdnflib_vc90_debug.lib;Version.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\Setup;..\istools\lib\vc100;..\istools\3rdparty\tbb30\lib\ia32\vc9;C:\OpenCASCADE6.8.0\opencascade-6.8.0\win32\vc10\libd\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Midl>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MkTypLibCompatible>false</MkTypLibCompatible>
+      <ValidateAllParameters>true</ValidateAllParameters>
+    </Midl>
+    <ClCompile>
+      <Optimization>MinSpace</Optimization>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <AdditionalIncludeDirectories>.\occlib;..\istools;..\istools\inc;..\istools\inc\gui;..\istools\inc\util;..\istools\sdnflib\sdnflib;..\istools\3rdparty\tbb30\include;C:\OpenCASCADE6.8.0\opencascade-6.8.0\inc\;%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <PreprocessorDefinitions>WIN32;_WINDOWS;NDEBUG;WNT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <MinimalRebuild>false</MinimalRebuild>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <PrecompiledHeader>Use</PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <DebugInformationFormat>ProgramDatabase</DebugInformationFormat>
+    </ClCompile>
+    <ResourceCompile>
+      <PreprocessorDefinitions>NDEBUG;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <Culture>0x0409</Culture>
+      <AdditionalIncludeDirectories>$(IntDir);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+    </ResourceCompile>
+    <Link>
+      <AdditionalDependencies>occlib_vc90.lib;sdnflib_vc90.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>.\Setup;..\istools\lib\vc100;..\istools\3rdparty\tbb30\lib\ia32\vc9;C:\OpenCASCADE6.8.0\opencascade-6.8.0\win32\vc10\lib\;%(AdditionalLibraryDirectories)</AdditionalLibraryDirectories>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <SubSystem>Windows</SubSystem>
+      <OptimizeReferences>true</OptimizeReferences>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <TargetMachine>MachineX86</TargetMachine>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="Command\AbstractCommand.cpp" />
+    <ClCompile Include="AISSelector.cpp" />
+    <ClCompile Include="Command\AppCommandManager.cpp" />
+    <ClCompile Include="AppDocData.cpp" />
+    <ClCompile Include="ConnPntGenerator.cpp" />
+    <ClCompile Include="Command\DeleteCommand.cpp" />
+    <ClCompile Include="EditLinearMemberShapeDlg.cpp" />
+    <ClCompile Include="EndPlate.cpp" />
+    <ClCompile Include="EndPlateGenerator.cpp" />
+    <ClCompile Include="EndPlateShapeDlg.cpp" />
+    <ClCompile Include="FileView.cpp" />
+    <ClCompile Include="GussetPlate.cpp" />
+    <ClCompile Include="GussetPlateGenerator.cpp" />
+    <ClCompile Include="GussetPlateShapeDlg.cpp" />
+    <ClCompile Include="HorGussetPlateGenerator.cpp" />
+    <ClCompile Include="Interpreter.cpp" />
+    <ClCompile Include="LinearMemberShapeDlg.cpp" />
+    <ClCompile Include="LoginDlg.cpp" />
+    <ClCompile Include="MainFrm.cpp" />
+    <ClCompile Include="OCCShapeBuilder.cpp" />
+    <ClCompile Include="OutputWnd.cpp" />
+    <ClCompile Include="PlateConfigDlg.cpp" />
+    <ClCompile Include="PlateFile.cpp" />
+    <ClCompile Include="PropertiesWnd.cpp" />
+    <ClCompile Include="PythonCall.cpp" />
+    <ClCompile Include="SDNFAttribute.cpp" />
+    <ClCompile Include="SelectionSet.cpp" />
+    <ClCompile Include="singleinstance.cpp" />
+    <ClCompile Include="SmartSteel.cpp" />
+    <ClCompile Include="SmartSteelDoc.cpp" />
+    <ClCompile Include="SmartSteelPropertyPage.cpp" />
+    <ClCompile Include="SmartSteelPropertySheet.cpp" />
+    <ClCompile Include="SmartSteelView.cpp" />
+    <ClCompile Include="stdafx.cpp">
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Create</PrecompiledHeader>
+      <PrecompiledHeader Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">Create</PrecompiledHeader>
+    </ClCompile>
+    <ClCompile Include="SteelConnPoint.cpp" />
+    <ClCompile Include="SteelPlate.cpp" />
+    <ClCompile Include="SteelSectionBuilder.cpp" />
+    <ClCompile Include="ViewTree.cpp" />
+    <ClCompile Include="WorkStatusDlg.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="ConnPntGenerator.h" />
+    <ClInclude Include="Command\AbstractCommand.h" />
+    <ClInclude Include="AISSelector.h" />
+    <ClInclude Include="Command\AppCommandManager.h" />
+    <ClInclude Include="AppDocData.h" />
+    <ClInclude Include="BaseClass.h" />
+    <ClInclude Include="Console.h" />
+    <ClInclude Include="Command\DeleteCommand.h" />
+    <ClInclude Include="EditLinearMemberShapeDlg.h" />
+    <ClInclude Include="EndPlate.h" />
+    <ClInclude Include="EndPlateGenerator.h" />
+    <ClInclude Include="EndPlateShapeDlg.h" />
+    <ClInclude Include="FileView.h" />
+    <ClInclude Include="GussetPlate.h" />
+    <ClInclude Include="GussetPlateGenerator.h" />
+    <ClInclude Include="GussetPlateShapeDlg.h" />
+    <ClInclude Include="HorGussetPlateGenerator.h" />
+    <ClInclude Include="Interpreter.h" />
+    <ClInclude Include="LinearMemberShapeDlg.h" />
+    <ClInclude Include="LoginDlg.h" />
+    <ClInclude Include="MainFrm.h" />
+    <ClInclude Include="OCCShapeBuilder.h" />
+    <ClInclude Include="OutputWnd.h" />
+    <ClInclude Include="PlateConfigDlg.h" />
+    <ClInclude Include="PlateFile.h" />
+    <ClInclude Include="PropertiesWnd.h" />
+    <ClInclude Include="PyObjectBase.h" />
+    <ClInclude Include="PythonCall.h" />
+    <ClInclude Include="Resource.h" />
+    <ClInclude Include="SDNFAttribute.h" />
+    <ClInclude Include="SelectionSet.h" />
+    <ClInclude Include="singleinstance.h" />
+    <ClInclude Include="SmartSteel.h" />
+    <ClInclude Include="SmartSteelDoc.h" />
+    <ClInclude Include="SmartSteelPropertyPage.h" />
+    <ClInclude Include="SmartSteelPropertySheet.h" />
+    <ClInclude Include="SmartSteelView.h" />
+    <ClInclude Include="stdafx.h" />
+    <ClInclude Include="SteelConnPoint.h" />
+    <ClInclude Include="SteelPlate.h" />
+    <ClInclude Include="SteelSectionBuilder.h" />
+    <ClInclude Include="targetver.h" />
+    <ClInclude Include="ViewTree.h" />
+    <ClInclude Include="WorkStatusDlg.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="res\but_Cancel.ico" />
+    <None Include="res\but_Ok.ico" />
+    <None Include="res\buttons.bmp" />
+    <None Include="res\class_view.ico" />
+    <None Include="res\class_view_hc.ico" />
+    <None Include="res\classview.bmp" />
+    <None Include="res\classview_hc.bmp" />
+    <None Include="res\explorer.bmp" />
+    <None Include="res\explorer_hc.bmp" />
+    <None Include="res\ezGussetPlate.bmp" />
+    <None Include="res\ezGussetPlate.rc2" />
+    <None Include="res\file_view.ico" />
+    <None Include="res\file_view_hc.ico" />
+    <None Include="res\filelarge.bmp" />
+    <None Include="res\filesmall.bmp" />
+    <None Include="res\fileview.bmp" />
+    <None Include="res\fileview_hc.bmp" />
+    <None Include="res\info.ico" />
+    <None Include="res\main.bmp" />
+    <None Include="res\menuimages.bmp" />
+    <None Include="res\menuimages_hc.bmp" />
+    <None Include="res\messages.bmp" />
+    <None Include="res\output_wnd.ico" />
+    <None Include="res\output_wnd_hc.ico" />
+    <None Include="res\properties.bmp" />
+    <None Include="res\properties_hc.bmp" />
+    <None Include="res\properties_wnd.ico" />
+    <None Include="res\properties_wnd_hc.ico" />
+    <None Include="res\reset_activate_code.ico" />
+    <None Include="res\SmartSteel.ico" />
+    <None Include="res\SmartSteelDoc.ico" />
+    <None Include="res\sort.bmp" />
+    <None Include="res\sort_hc.bmp" />
+    <None Include="res\Toolbar.bmp" />
+    <None Include="res\Toolbar256.bmp" />
+    <None Include="res\tools_stdCamera.bmp" />
+    <None Include="res\warning.ico" />
+    <None Include="res\writelarge.bmp" />
+    <None Include="res\writesmall.bmp" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="ezGussetPlate.rc" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <ProjectExtensions>
+    <VisualStudio>
+      <UserProperties RESOURCE_FILE="ezGussetPlate.rc" />
+    </VisualStudio>
+  </ProjectExtensions>
+</Project>

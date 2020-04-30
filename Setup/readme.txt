@@ -1,0 +1,54 @@
+2014.08.23: 1.0.1.7
+ 1. 프로그램 안정성 강화
+ 2. Gusset/End Plate 생성 속도 개선
+ 3. Visualization 개선
+
+2014.05.21: 1.0.1.6
+ 1. GussetPlate 생성 오류 수정
+ 2. GussetPlate 생성 위치 오류 수정
+
+2014.04.03: 1.0.1.5
+ 1. #32:Ver. Brace의 Brace to Brace의 Gusset Plate의 생성 보완 필요
+ 2. #33:Hor. Brace의 교차된 Brace에 1개만 생성되며 Size가 작게 생성됨
+ 3. SectionName을 대소문자 구별하지 않도록 함
+ 4. Hor. Plate 생성시 오류 발생 수정
+
+2014.03.04: 1.0.1.4
+ 1. 중간 파일 생성시 오류 발생 수정
+
+2014.02.10: 1.0.1.3
+ 1. Shape의 Unit를 설정하는 기능 추가
+ 2. Gusset Plate를 Merge하는 옵션 추가
+
+2014.01.07: 1.0.1.2
+ 1. fixed some bugs
+
+2013.10.26: 1.0.1.1
+ 1. Login 창 추가
+
+2013.10.24: 1.0.0.9
+ 1. #26:BEAM의 길이가 2M 보다 작을때 EndPlate를 생성할 것인지에 대한 옵션 제공
+ 2. GussetPlate없이 EndPlate만 있을때 FWP로 Export되지 않는 현상 수정
+ 3. version 정보 표기
+
+2013.08.08: 1.0.0.7
+ 1. Brace와 Brace가 X자로 만나는 곳에 대한 Gusset Plate 생성 개선
+ 2. Rotate와 Zoom기능에 대해 한번 선택하면 다른 버튼을 선택할 때 까지 계속 유지
+ 3. SDNF file format ver. 2 지원
+
+2013.08.05: 1.0.0.6
+ 1. #16:Ver. & Hor. Brace의 Plate의 폭이 600mm가 넘으면 두 개로 분리하여 작성
+ 2. #17:END Plate의 경우 서로 겹치면 생성하지 않음
+ 3. Beam To Hor. Brace에서 생성되는 Gusset Plate가 Hor. Brace위에 생성되도록 수정
+ 4. Gusset/End Plate가 부재와 겹쳐지지 않도록 수정
+ 5. File Open 기능 개선
+ 6. 전반적인 Gusset/End Plate 생성 개선
+ 7. Plate의 속성 보기
+
+2013.07.24: 1.0.0.5
+ 1. #14: 생성한 Plate 삭제 기능
+ 2. #15: H(WEB)Type Brace는 Option으로 처리
+
+2013.07.08: 1.0.0.4
+ 1. #6: BEAM TO VER. BRACE , VER. BRACE TO VER. BRACE 타입 Gusset Plate가 겹쳐서 생성
+ 2. #8: BEAM TO VER. BRACE 타입 Gusset Plate 생성 오류
