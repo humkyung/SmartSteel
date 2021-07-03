@@ -1,6 +1,6 @@
 # SmartSteel
 
-<img src="https://github.com/humkyung/SmartSteel/blob/master/Docs/SmartSteel.png" align="left" />\
+<img src="https://github.com/humkyung/SmartSteel/blob/master/Docs/SmartSteel.png" align="left" /><br />
 
 ------
 
